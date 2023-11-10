@@ -1,10 +1,11 @@
 public class ButterflyPattern {
 	public static void main(String args[])
 	{
-		int r=8,c=8;
-                int spaces = c-2;
+		int r=10;
+        int spaces;
         for(int i=1;i<=r/2;i++)
         {
+        	spaces = 2*((r/2)-i);
             for(int k=1;k<=i;k++)
             {
                 System.out.print("*");
@@ -18,11 +19,10 @@ public class ButterflyPattern {
                 System.out.print("*");
             }
             System.out.println();
-            spaces -= 2;
         }
-        spaces = 0;
         for(int i=r/2;i>=1;i--)
         {
+        	spaces = 2*((r/2)-i);
             for(int k=1;k<=i;k++)
             {
                 System.out.print("*");
@@ -36,7 +36,6 @@ public class ButterflyPattern {
                 System.out.print("*");
             }
             System.out.println();
-            spaces += 2;
         }
         
 	}
